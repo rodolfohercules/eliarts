@@ -26,7 +26,7 @@ main {
 
 main h1 {
   color: #ff2a91;
-  font-size: 3rem;
+  font-size: 3.2rem;
   margin-bottom: 3rem;
 }
 
@@ -81,8 +81,36 @@ main form input[type="submit"] {
     width: 50%;
     margin-top: 1rem;
     border-radius: 32px;
-    background:#ff2a91;
+    background: #de1375;
     color:#000000;
     font-size: 1.4rem;
+    transition: all 0.3s ease-in-out;
     
+}
+
+main form input[type="submit"]:hover {
+    background:#ff2a91;
+}
+
+section.images {
+    display: flex;
+    align-items:flex-end;
+    padding: 1rem;
+    
+}
+
+#logo {
+    width: 400px;
+    height: 400px;
+}
+
+section.images .circle {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background:linear-gradient(45deg, #f51f75, #f66fc7);
+    clip-path:circle(70% at right 100%);
+    z-index:-1;
 }
