@@ -14,6 +14,8 @@ body {
   font-weight: 600;
   display: flex;
   min-height: 100vh;
+  min-width: 100vw;
+
 }
 
 main {
@@ -22,12 +24,14 @@ main {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  
 }
 
 main h1 {
   color: #ff2a91;
   font-size: 3.2rem;
   margin-bottom: 3rem;
+  text-align: center;
 }
 
 main .create-media a {
@@ -59,7 +63,7 @@ main .alternative span::before, main .alternative span::after {
     width: 100px;
     bottom: 50%;
     right: 50px;
-    background:#ff9120;
+    background:#ff9120; 
 
 }
 
@@ -119,10 +123,14 @@ main form input[type="submit"]:hover {
 }
 
 section.images {
+    width: 50vw;
     display: flex;
-    align-items:flex-end;
-    padding: 1rem;
-    
+    align-items: flex-end;
+    justify-content: flex-end;
+    padding:2.5rem;
+}
+section.images img {
+    width: 100%;
 }
 
 #logo {
@@ -137,6 +145,40 @@ section.images .circle {
     top: 0;
     left: 0;
     background:linear-gradient(45deg, #f51f75, #f66fc7);
-    clip-path:circle(70% at right 100%);
+    clip-path:circle(60% at right 100%);
     z-index:-1;
+}
+
+@media only screen and (min-width: 900px) and (max-width:1200px) {
+    section.images img {
+        width: 110%;
+    }
+    section.images .circle {
+        clip-path:circle(53% at right 100%);  
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    section.images {
+        display: none;
+        visibility: hidden;
+    }
+    
+    main {
+        width: 100vw;
+    }
+}
+
+@media only screen and (max-width: 450px) {
+    main h1 {
+        font-size: 2rem;
+    }
+
+    main .alternative span {
+        font-size: 0,8rem;
+    }
+
+    main form label span, main form input[type="submit"] {
+        font-size: 1rem;
+    }
 }
