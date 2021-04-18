@@ -41,6 +41,32 @@ main .create-media img {
   margin-left: 0;
 }
 
+main .alternative {
+    margin-top: 1rem;
+}
+
+main .alternative span {
+    font-size: 1.4rem;
+    font-weight: 400;
+    position: relative;
+
+}
+
+main .alternative span::before, main .alternative span::after {
+    position: absolute;
+    content: '';
+    height: 1px;
+    width: 100px;
+    bottom: 50%;
+    right: 50px;
+    background:#ff9120;
+
+}
+
+main .alternative span::after {
+    left: 50px;
+   
+}
 #logo {
   width: 450px;
   height: 450px;
